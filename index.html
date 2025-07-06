@@ -781,7 +781,7 @@ mjx-c.mjx-c1D439.TEX-I::before {
 
                 <div class="is-size-6 publication-authors">
                   <span class="author-block"><sup>1</sup>NJUST,<sup>2</sup>HKUST(GZ) </span>
-                  <span class="eql-cntrb"><small><br><sup>*</sup>Equal contribution <sup>†</sup>Corresponding author</small></span>
+                  <span class="eql-cntrb"><small><br><sup>†</sup>Corresponding author</small></span>
                 </div>
 
                 <div class="column has-text-centered">
@@ -834,7 +834,7 @@ mjx-c.mjx-c1D439.TEX-I::before {
           <div class="column is-half">
             <div class="vertical-center">
               <p style="text-align: justify; line-height: 1.6;">
-                It has been shown that text-to-image generative models are highly sensitive to the user-provided natural language prompts. Automatically refining user-provided natural language prompts into the form preferred by generative models is essential for improving user experience. Prior methods typically depend on human-engineered refinement data to train the refinement model, as shown in (a). However, we found an alternative prompt yields superior result but includes symbols that humans would not typically consider, as shown in (c). This highlights the limitations of using discrete human-engineered prompts for optimization, which explore only a limited portion of the discrete space and do not consider the continuous space. However, our method has demonstrated that there are more optimal solutions within the continuous space, leading to significantly better results. We propose a prompt optimization framework that directly aims to enable generative models to generate high-quality images by optimizing user-provided prompts in continuous space.
+                It has been shown that text-to-image generative models are highly sensitive to the user-provided natural language prompts. Automatically refining user-provided natural language prompts into the form preferred by generative models is essential for improving user experience. Prior methods typically depend on human-engineered refinement data to train the refinement model, as shown in (a). However, we found an alternative prompt yields superior result but includes symbols that humans would not typically consider, as shown in (c). This highlights the limitations of using discrete human-engineered prompts for optimization, which explore only a limited portion of the discrete space and do not consider the continuous space. While our method has demonstrated that there are more optimal solutions within the continuous space, leading to significantly better results.
               </p>
             </div>
           </div>
@@ -898,30 +898,27 @@ compared to the state-of-the-art baselines.
 
 
 
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content has-text-centered"> <!-- 添加 has-text-centered 类 -->
           <h2 class="title is-3">Prompt Refinement</h2>
 
           <p>
           <img src="./Learning on Model Weights using Tree Experts_files/2.png" alt="ProbeX Overview" class="blend-img-background center-image" style="max-width: 85%; height: auto;">
           </p>
            
-                <p>
+              <p style="text-align: justify; line-height: 1.6;">
                   In our proposed continuous optimization training process, the vast search space presents challenges, requiring a more guided approach. Recognizing that high-quality prompts often share common characteristics, we can capture relevant features—such as coherent structure, optimal token selection, and clear semantic meaning—to guide the refinement process and align with these successful patterns.
 
                   To achieve this, we first train a memory module by reconstructing input prompts (following the VQ-VAE method), which encodes the common features of high-quality prompts. During the refinement process, after obtaining the semantic representation of the input prompt, it is passed through a semantic augmenter, which integrates relevant high-quality features from the memory module to enhance the initial representation. Finally, we train an adapter to optimize the prompt for direct alignment with generative models, producing high-quality images.
                 </p>
+              </div>
+            </div>
           </div>
-          
-
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
@@ -930,9 +927,9 @@ compared to the state-of-the-art baselines.
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full">
-          <div class="content">
+          <div class="content has-text-centered">
             <h2 class="title is-3">Main Results</h2>
-              <p>
+            <p style="text-align: justify; line-height: 1.6;">
                 We evaluate our method on two in-domain datasets: Lexica.art and DiffusionDB, as well as one out-of-domain dataset: COCO. Our method demonstrates superior performance
                 compared to all baselines. Although GPT3.5 is widely used in natural language processing
                 tasks, it does not perform well in refining prompts for text-to-image
@@ -953,12 +950,12 @@ compared to the state-of-the-art baselines.
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full">
-          <div class="content">
+          <div class="content has-text-centered">
             <h2 class="title is-3">Information Capacity of Refined Prompts</h2>
             <p>
             <img src="./Learning on Model Weights using Tree Experts_files/5.png" alt="Model retrieval" class="blend-img-background center-image" style="max-width: 85%; height: auto;">
             </p>
-              <p>
+            <p style="text-align: justify; line-height: 1.6;">
                 To gain deeper insights into how our method enhances the quality of generated
                 images, we analyze the attention states of the cross-attention layers
                 in the stable diffusion model during the image generation process. The results demonstrate that images generated using prompts optimized by
@@ -978,12 +975,12 @@ compared to the state-of-the-art baselines.
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">Case study</h2>
+        <div class="content has-text-centered">
+          <h2 class="title is-3">Case Study</h2>
           <p>
           <img src="./Learning on Model Weights using Tree Experts_files/4.png" alt="Model retrieval" class="blend-img-background center-image" style="max-width: 85%; height: auto;">
           </p>
-            <p>
+          <p style="text-align: justify; line-height: 1.6;">
               We presents several refinement examples. The results demonstrates that
               MPPR generates images that are both highly relevant to the user
               input and visually appealing. Compared to other methods, MPPR
@@ -1010,8 +1007,106 @@ compared to the state-of-the-art baselines.
   </div>
 </section> -->
 <!--End BibTex citation -->
+<!-- More Results -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content has-text-centered">
+          <h2 class="title is-3">More Results</h2>
+          
+          <!-- First row with two examples -->
+          <div class="columns is-vcentered">
+            <div class="column is-half">
+              <div class="box" style="height: 300px; overflow: hidden;">
+                <p class="subtitle is-5">mark Zuckerberg as woody from toy story</p>
+                <img src="./Learning on Model Weights using Tree Experts_files/10.png" alt="Example 1 Image" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box" style="height: 300px; overflow: hidden;">
+                <p class="subtitle is-5">ukiyo-e portrait of a bearded man in a mushroom hat</p>
+                <img src="./Learning on Model Weights using Tree Experts_files/l_179.png" alt="Example 2 Image" style="width: 100%; height: 100%; object-fit: contain;margin-top: -10px;">
+              </div>
+            </div>
+          </div>
 
+          <!-- Second row with two examples -->
+          <div class="columns is-vcentered">
+            <div class="column is-half">
+              <div class="box" style="height: 300px; overflow: hidden;">
+                <p class="subtitle is-5">hyperdetailed stunningly beautiful robot made of iridescent metals</p>
+                <img src="./Learning on Model Weights using Tree Experts_files/lexica_141.png" alt="Example 3 Image" style="width: 100%; height: 100%; object-fit: contain;margin-top: -10px;">
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box" style="height: 300px; overflow: hidden;">
+                <p class="subtitle is-5">concept art of anthropomorphized wolf</p>
+                <img src="./Learning on Model Weights using Tree Experts_files/l_224.png" alt="Example 4 Image" style="width: 100%; height: 100%; object-fit: contain;">
+              </div>
+            </div>
+          </div>
+          <!-- Button to show more -->
+          <button id="show-more-btn" class="button is-primary">Show More</button>
 
+          <!-- Third row with two examples (Initially hidden) -->
+          <div id="third-row" class="columns is-vcentered" style="display: none;">
+            <!-- Third row content -->
+            <div class="column is-half">
+              <div class="box" style="height: 510px; overflow: hidden;">
+                <p class="subtitle is-5">product photo of a futuristic cut stylized pet robot by artgerm and greg rutkowski and alphonse mucha</p>
+                <img src="./Learning on Model Weights using Tree Experts_files/l-591.png" alt="Example 3 Image" style="width: 100%; height: 100%; object-fit: contain;margin-top: -25px;">
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box" style="height: 510px; overflow: hidden;">
+                <p class="subtitle is-5">weta disney pixar movie still photo of funny corgi with baseball bat-dog by pixar-by weta</p>
+                <img src="./Learning on Model Weights using Tree Experts_files/125.png" alt="Example 4 Image" style="width: 100%; height: 100%; object-fit: contain;">
+              
+              </div>
+            </div>
+          </div>
+
+          <!-- Fourth row with two examples (Initially hidden) -->
+          <div id="fourth-row" class="columns is-vcentered" style="display: none;">
+            <!-- Fourth row content -->
+            <div class="column is-half">
+              <div class="box" style="height: 520px; overflow: hidden;">
+                <p class="subtitle is-5">A futuristic city at night with towering skyscrapers, neon signs, and bustling crowds. Holographic advertisements project from buildings, reflecting off wet pavement. The scene should have a cyberpunk aesthetic.</p>
+                <img src="./Learning on Model Weights using Tree Experts_files/-1.png" alt="Example 5 Image" style="width: 100%; height: 100%; object-fit: contain;margin-top: -5px;">
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="box" style="height: 520px; overflow: hidden;">
+                <p class="subtitle is-5">A dense, enchanted forest with glowing mushrooms, crystal-clear streams, and mythical creatures like unicorns and butterfly fairy. Tall trees with luminescent leaves tower above, and a hidden temple peeks through the foliage.</p>
+                <img src="./Learning on Model Weights using Tree Experts_files/-2.png" alt="Example 6 Image" style="width: 100%; height: 100%; object-fit: contain;margin-top: -5px;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Show Less button (Initially hidden) -->
+          <button id="show-less-btn" class="button is-link" style="display: none;">Show Less</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("show-more-btn").addEventListener("click", function() {
+      document.getElementById("third-row").style.display = "flex";  // Show third row
+      document.getElementById("fourth-row").style.display = "flex"; // Show fourth row
+      document.getElementById("show-more-btn").style.display = "none";  // Hide Show More button
+      document.getElementById("show-less-btn").style.display = "inline";  // Show Show Less button
+    });
+  
+    document.getElementById("show-less-btn").addEventListener("click", function() {
+      document.getElementById("third-row").style.display = "none";  // Hide third row
+      document.getElementById("fourth-row").style.display = "none";  // Hide fourth row
+      document.getElementById("show-more-btn").style.display = "inline";  // Show Show More button
+      document.getElementById("show-less-btn").style.display = "none";  // Hide Show Less button
+    });
+  </script>
+<!-- End More Results  -->
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
